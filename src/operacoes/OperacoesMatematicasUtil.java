@@ -7,9 +7,14 @@ public class OperacoesMatematicasUtil {
 	public static final String SOMA = "SOMA";
 	public static final String SUBTRACAO = "SUBTRACAO";
 	public static final String MULTIPLICACAO = "MULTIPLICACAO";
-	
+	public static final String BINARIO = "BINARIO";
+	public static final String DECIMAL = "DECIMAL";
+	public static final String HEXADECIMAL = "HEXADECIMAL";
+
 	private static BigDecimal valorAtual = null;  
 	private static String operacao = "";
+	public static String tipoNum1 = "";
+	public static String tipoNum2 = "";
 	
 	private static void somar(BigDecimal numeroDigitado) {
 		valorAtual = valorAtual.add(numeroDigitado);
