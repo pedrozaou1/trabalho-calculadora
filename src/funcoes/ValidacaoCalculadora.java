@@ -9,6 +9,8 @@ public class ValidacaoCalculadora {
 	private ValidacaoCalculadora() {
 	}
 
+	
+	
 	public static String adicionarPontuacaoMilhar(String textoDigitado) {
 		String textoSemZerosIniciais = textoDigitado;
 		var textoAuxiliar = new StringBuilder();
