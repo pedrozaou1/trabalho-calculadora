@@ -157,6 +157,9 @@ public class CalculadoraConversao extends JFrame {
 		planoFundo.add(btnSubtracao);
 
 		var btnCalcularResultado = new JButton("=");
+		btnCalcularResultado.setVerticalTextPosition(SwingConstants.TOP);
+		btnCalcularResultado.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnCalcularResultado.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/gamakichi=.png")));
 		btnCalcularResultado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(OperacoesMatematicasUtil.getOperacao() != null && OperacoesMatematicasUtil.getValorAtual() != null) {
@@ -290,15 +293,15 @@ public class CalculadoraConversao extends JFrame {
 
 		var btnNum1 = new JButton("1");
 		btnNum1.setHorizontalAlignment(SwingConstants.LEFT);
-		btnNum1.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/tobi1.png")));
+		btnNum1.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/fotoBranco.png")));
 		btnNum1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				btnNum1.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/fotoBranco.png")));
+				btnNum1.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/tobi1.png")));
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btnNum1.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/tobi1.png")));
+				btnNum1.setIcon(new ImageIcon(CalculadoraConversao.class.getResource("/imagens/fotoBranco.png")));
 			}
 		});
 		btnNum1.addActionListener(new ActionListener() {
@@ -454,6 +457,7 @@ public class CalculadoraConversao extends JFrame {
 				menu.setVisible(true);
 				setVisible(false);
 				planoFundo.requestFocusInWindow();
+				btnVoltar.requestFocusInWindow();
 			}
 		});
 		btnVoltar.setForeground(Color.WHITE);
